@@ -8,8 +8,8 @@ function prepareEnvironmentAndLaunch() {
     console.log('[MCP-WRAPPER] Starting environment preparation...');
 
     // --- 1. GSC Credentials ---
-    // Reads GSC_CREDENTIALS_JSON_STRING from Heroku, writes to /tmp, then sets GOOGLE_APPLICATION_CREDENTIALS.
-    const gscCredentialsJsonString = process.env.GSC_CREDENTIALS_JSON_STRING;
+    // Reads GOOGLE_APPLICATION_CREDENTIALS_STRING from Heroku, writes to /tmp, then sets GOOGLE_APPLICATION_CREDENTIALS.
+    const gscCredentialsJsonString = process.env.GOOGLE_APPLICATION_CREDENTIALS_STRING;
     if (gscCredentialsJsonString && gscCredentialsJsonString.trim() !== "") {
         const tempGscPath = path.join(os.tmpdir(), 'gsc-sa-key.json');
         try {
@@ -20,7 +20,7 @@ function prepareEnvironmentAndLaunch() {
             console.error('[MCP-WRAPPER-GSC] CRITICAL: Failed to write GSC credentials file:', error);
         }
     } else {
-        console.warn('[MCP-WRAPPER-GSC] WARNING: GSC_CREDENTIALS_JSON_STRING Heroku env var not set or empty. GSC server will likely fail.');
+        console.warn('[MCP-WRAPPER-GSC] WARNING: GOOGLE_APPLICATION_CREDENTIALS_STRING Heroku env var not set or empty. GSC server will likely fail.');
     }
 
     // --- 2. Google Analytics Private Key (Base64 method) ---
