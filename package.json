@@ -7,6 +7,9 @@
     "start": "npx @typingmind/mcp $MCP_AUTH_TOKEN",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "engines": {
+    "node":">=20.1"
+  },
   "keywords": [
     "typingmind",
     "mcp",
