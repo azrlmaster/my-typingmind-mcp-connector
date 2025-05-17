@@ -2,7 +2,7 @@
   "name": "my-typingmind-mcp-connector",
   "version": "1.0.0",
   "description": "TypingMind MCP Connector hosted on Railway",
-  "main": "index.js", // This file won't really be used if only running npx
+  "main": "index.js",
   "scripts": {
     "start": "npx @typingmind/mcp $MCP_AUTH_TOKEN",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -13,6 +13,6 @@
     "connector",
     "railway"
   ],
-  "author": "Bryan Marvin", // Change this
-  "license": "ISC"     // Or your preferred license
+  "author": "Bryan Marvin",
+  "license": "ISC"
 }
