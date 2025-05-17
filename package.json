@@ -4,7 +4,7 @@
   "description": "TypingMind MCP Connector hosted on Railway",
   "main": "index.js",
   "scripts": {
-    "start": "node my-simple-server.js",
+    "start": "npx @typingmind/mcp $MCP_AUTH_TOKEN",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
