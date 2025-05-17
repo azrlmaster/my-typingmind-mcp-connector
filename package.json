@@ -1,10 +1,10 @@
-{
+o{
   "name": "my-typingmind-mcp-connector",
   "version": "1.0.0",
   "description": "TypingMind MCP Connector hosted on Railway",
   "main": "index.js",
   "scripts": {
-    "start": "DEBUG=* npx @typingmind/mcp $MCP_AUTH_TOKEN",
+    "start": "DEBUG=* npx @typingmind/mcp-connector $MCP_AUTH_TOKEN",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "engines": {
