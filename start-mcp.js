@@ -39,7 +39,6 @@ function prepareEnvironmentAndLaunch() {
     } else {
             console.warn('[MCP-WRAPPER-GSC-SA] WARNING: GOOGLE_APPLICATION_CREDENTIALS Heroku env var not set or empty. If @typingmind/mcp needs GSC via SA, it will likely fail.');
         }
-    }
 
     // --- 2. Google Analytics Private Key (Base64 method) ---
     // (This section remains unchanged, assuming GA uses its own service account or key distinct from GSC's new OAuth)
